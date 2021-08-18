@@ -19,5 +19,5 @@ Route::get('/', function () {
 
 Route::get("/get", [App\Http\Controllers\ProductController::class, 'get']);
 Route::post("/add", [App\Http\Controllers\ProductController::class, 'add']);
-Route::post("/edit", [App\Http\Controllers\ProductController::class, 'edit']);
+Route::patch("/edit", [App\Http\Controllers\ProductController::class, 'edit']);
 

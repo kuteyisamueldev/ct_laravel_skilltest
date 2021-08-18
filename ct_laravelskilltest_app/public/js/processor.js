@@ -76,11 +76,11 @@ $(document).ready(function () {
 				headers: {
                     'X-CSRF-TOKEN' : $('meta[name="csrf-token"]').attr('content')
                 },
-				method: 'post',
+				method: 'patch',
 				url: "/edit",
 				data: form.serialize(),
 				success: function (response) {
-					console.log(response)
+					//console.log(response)
 					$("table tbody").html("");
 						var items = response.data;
 
@@ -120,7 +120,7 @@ function loadItems(items) {
 
 				 main_total += total_value;
 		}
-		console.log(main_total)
+		//console.log(main_total)
 
 		$("table tbody").append(`
 				 		<tr>
